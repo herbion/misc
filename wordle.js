@@ -24,7 +24,7 @@ let isCorrect = letter => getCategory("correct").map(it => it.letter).includes(l
 
 let hasCorrect = word => getCategory("correct").every(({letter, index}) => word[index] == letter);
 let hasPresent = word => getCategory("present").every(({letter, index}) => word[index] != letter && word.includes(letter));
-let hasAbsent  = word => getCategory("absent").some(({letter, index})  => word.includes(letter) && !isCorrect(letter));
+let hasAbsent  = word => getCategory("absent").some(({letter, index})   => word.includes(letter) && !isCorrect(letter));
 
 let match = dictionary
     .filter(hasCorrect)
