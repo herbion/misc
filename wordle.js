@@ -13,8 +13,8 @@ var state = rows
 	            evaluation: letter.getAttribute("evaluation")
 	        }        	
         }))
-		.filter(words => words[0].letter)
-	;
+	.filter(words => words[0].letter)
+;
 
 
 let not = fn => arg => !fn(arg);
